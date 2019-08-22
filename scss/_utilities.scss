@@ -1,0 +1,124 @@
+// Container
+.container {
+    max-width: $max-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  // Text Styles
+  .x-large {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.7rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+  }
+  
+  .large {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 0.8rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .tiny {
+    font-size: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-primary {
+    color: $primary-color;
+  }
+  
+  .round-img {
+    border-radius: 50%;
+  }
+  
+  .line {
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 0;
+  }
+  .under-deco{
+    text-decoration: underline $primary-color ;
+  }
+
+  
+  
+ 
+  
+  // Buttons
+  .btn {
+    display: inline-block;
+    background: $light-color;
+    color: #333;
+    padding: 0.4rem 1.3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease-in;
+  
+    &-primary {
+      @include set-background($primary-color);
+      &:hover {
+        background: lighten($primary-color, 5%);
+      }
+    }
+    &-dark {
+      @include set-background($dark-color);
+      &:hover {
+        background: lighten($dark-color, 5%);
+      }
+    }
+    &:hover {
+      background: lighten($dark-color, 20%);
+      color: #fff;
+    }
+  }
+
+  .dark-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(216, 215, 215, 0.4);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  display: block;
+  padding-bottom: 3.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  }
+
+  .grad {
+    background-image: linear-gradient(to right top, #a9b4ee, #b4bdf2, #bec6f6, #c9d0f9, #d3d9fd);
+  }

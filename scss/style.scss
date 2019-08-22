@@ -1,0 +1,580 @@
+@import "config";
+@import "utilities";
+@import "presentations";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $light-color;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+.navbar {
+  font-size: 1.1rem;
+  background-image: linear-gradient(
+    260deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+}
+/* Langing Page Styling */
+.landing {
+  position: relative;
+  background: url("../img/adventure-beauty-blonde-hair-725255.jpg") no-repeat center
+    center/cover;
+  height: 100vh;
+
+  &-inner {
+    color: #333;
+    position: relative;
+    width: 60%;
+    top: 30%;
+    left: 18%;
+  }
+}
+
+#testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+
+
+  .containers {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    width: 30%;
+    height: auto;
+
+    p{
+      padding-top:1.3rem; 
+    }
+  
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+   img {
+    border-radius: 65%;
+    float:left;
+    display:inline;
+    margin-right:1em;
+    width:6rem;
+    height:4.5rem;
+  }
+  
+  span {
+    font-size: 20px;
+    margin-right: 1rem;
+  }
+
+  .test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  &:hover {
+    -webkit-box-shadow: -7px -11px 98px 34px rgb(23, 32, 100);
+    -moz-box-shadow: -7px -11px 98px 34px rgba(37,44,100,1);
+    box-shadow: -7px -11px 98px 34px rgba(37,44,100,1);
+  }
+}
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+  .landing-inner {
+    top: 8%;
+  }
+
+#testimonials {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+
+  
+  .containers {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    margin: 0.3rem;
+ 
+ img {
+    border-radius: 65%;
+    float:left;
+    display:inline;
+    margin-right:1em;
+    width:6rem;
+    height:4.5rem;
+  }
+  
+  span {
+    font-size: 20px;
+    margin-right: 1rem;
+  }
+}
+}
+
+}
+
+
+/* Landing Page Styling End*/
+
+/*Agency Page Styling*/
+.agency-landing {
+  background-image: linear-gradient(to right top, #b8bfe9, #c2c8ee, #ccd1f4, #d6dbf9, #e0e4ff);
+  position: relative;
+  height: 100vh;
+
+  &-inner {
+    color: #333;
+    position: relative;
+    width: 60%;
+    top: 20%;
+    left: 18%;
+  }
+}
+.agency-container{ 
+  width: 90vw;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  
+}
+#work{
+  background-image: linear-gradient(to right top, #b8bfe9, #c2c8ee, #ccd1f4, #d6dbf9, #e0e4ff);
+}
+.workers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+}
+
+.worker {
+  position: relative;
+  overflow: hidden;
+  background: $linear-color;
+  width: 25vw;
+  height: 60vh;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: inherit;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  // Bring in main color overlay
+  &:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+  }
+
+  // Scale image on hover
+  &:hover &-image {
+    transform: scale(1.2);
+  }
+
+  // Bring in text on hover
+  &:hover &-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &-image {
+    height: auto;
+    transform: translateZ(0);
+    display: block;
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  &-image:before {
+    content: '';
+    display: block;
+    padding-top: 75%;
+    overflow: hidden;
+  }
+
+  &-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    line-height: 0;
+  }
+
+  &-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+    color: $light-color;
+    transform: translateY(-20%);
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition-delay: 300ms;
+  }
+
+  &-text-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-text-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 5px 0 0 0;
+  }
+
+  &-text-category {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .agency-landing {
+    height: 100vh;
+  
+    &-inner {
+      top: 5%;
+    }
+  }
+  .workers {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  .agency-container{ 
+    width: 100vw;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .worker {
+    width: 100%;
+    height: 60vh;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .agency-landing {
+    height: 100vh;
+
+  
+    &-inner {
+      top: 5%;
+      line-height: 1;
+    }
+  }
+  .workers {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  .agency-container{ 
+    width: 100vw;
+    height: auto;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+}
+
+/*Agency Page Styling End*/
+
+/*Experience Page Styling*/
+.experience {
+position: relative;
+height: 50vh; 
+background: linear-gradient(to right top, #191b24, #c2c8ee, #4c4e57, #d6dbf9, #e0e4ff);
+color: $light-color;
+
+h1{
+  margin-top: 6rem;
+}
+}
+
+/*Experience Page Styling End*/
+
+/*Contact Page Styling*/
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Roboto", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:$light-color;
+	padding:25px;
+  margin:50px 0;
+  
+}
+
+#contact h3 {
+	color: $secondary-color;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:$light-color;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+  background: $linear-color;
+	color:$light-color;
+	margin:0 0 5px;
+	padding:10px;
+  font-size:15px;
+  margin-bottom: 1rem;
+}
+
+#contact button[type="submit"]:hover {
+  background: linear-gradient(to right, #360033 5%, #0b8793 55%, #360033 95%);
+	-webkit-transition:background 0.8s ease-in-out;
+	-moz-transition:background 0.8s ease-in-out;
+	transition:background-color 0.8s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #contact {
+    margin-bottom: 8rem;
+  }
+}
+/*Contact Page Styling End*/
+
+/*Footer Styling*/
+#main-footer {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+  padding-bottom: 0.5rem;
+  height: 6rem;
+  background-image: linear-gradient(
+    260deg,
+    $secondary-color 0%,
+    $primary-color 100%
+  );
+  width: 100%;
+
+  .footer-content {
+    width: 20rem;
+    color: $light-color;
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .social a {
+      color: #bfbfbf;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: $primary-color;
+        padding-right: 0.5rem;
+
+        &:hover {
+          color: $light-color;
+        }
+      }
+    }
+  }
+}
+
+/* Footer Styling End */
+
